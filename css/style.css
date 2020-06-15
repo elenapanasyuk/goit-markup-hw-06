@@ -881,10 +881,14 @@ img {
   padding: 12px 16px;
 }
 
-.form-call .label-comment {
+.form-call .comment-label {
   position: absolute;
   top: 12px;
   left: 16px;
+
+  transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 2500ms cubic-bezier(0.4, 0, 0.2, 1),
+    font-size 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .policy {
   display: block;
@@ -954,8 +958,8 @@ img {
   font-size: 12px;
 }
 
-.form-field:focus-within > .label-comment,
-.form-input:not(:placeholder-shown) + .label-comment {
+.form-field:focus-within > .comment-label,
+.form-input:not(:placeholder-shown) + .comment-label {
   transform: translateY(-28px);
   color: var(--accent-color);
   font-size: 12px;
